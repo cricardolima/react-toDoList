@@ -1,0 +1,30 @@
+.tasksHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.tasksHeader > div > strong {
+    font-size: 0.875rem;
+    margin-right: 1rem;
+}
+
+.tasksHeader > div:first-child > strong {
+    color: var(--blue-100);
+}
+
+.tasksHeader > div:last-child > strong {
+    color: var(--purple-700);
+}
+
+.tasksHeader > div > span {
+    background: var(--gray-400);
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--gray-200);
+    padding: 0.25rem 0.7rem;
+    border-radius: 0.8rem;
+}

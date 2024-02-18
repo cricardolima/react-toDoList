@@ -1,0 +1,101 @@
+.tasks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: inherit;
+}
+
+.tasksContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+    background: var(--gray-500);
+    border-radius: 0.5rem;
+}
+
+/* .tasksContainer p {
+    display: block;
+    color: var(--gray-100);
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    flex-grow: 1;
+} */
+
+.tasksContentCompleted, .tasksContentNotCompleted {
+    display: block;
+    color: var(--gray-100);
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    flex-grow: 1;
+}
+
+.tasksContentCompleted {
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
+.tasksContainer label {
+    display: block;
+    position: relative;
+    padding-left: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tasksContainer label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.tasksContainer label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background: var(--gray-400);
+    border-radius: 50%;
+    border: 2px solid var(--blue-100);
+}
+
+.tasksContainer label span:hover {
+    background: rgba(0, 195, 255, 0.1);
+}
+
+.tasksContainer label input:checked ~ span {
+    background: var(--purple-100);
+    border: none;
+}
+
+.tasksContainer label input:checked ~ span:hover {
+    background: rgba(130, 132, 250, 0.6);
+}
+
+.tasksContainer label input:checked ~ span::after {
+    content: "\2714";
+    position: absolute;
+    left: 0.2rem;
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+
+.tasksContainer button {
+    background: transparent;
+    padding: 0.2rem 0.2rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--gray-300);
+}
+
+.tasksContainer button:hover {
+    color: var(--red-500);
+    background: var(--gray-400);
+}

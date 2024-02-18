@@ -1,0 +1,24 @@
+.header {
+    background: var(--gray-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12.5rem;
+}
+
+.header span {
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.header span:first-child {
+    color: var(--blue-100);
+}
+
+.header span:last-child {
+    color: var(--purple-700);
+}
+
+.header img {
+    margin-right: 1rem;
+}
